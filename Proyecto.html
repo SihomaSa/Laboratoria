@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/YOUNG ENTREPRENEUR TRAINING.png">
+    <title>culturizáte.pe</title>
+<!--/CSS/-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="Quiz">
+      <!--/*Primera página*/-->
+      <div id="Bienvenido">
+        <h1>¡Bienvenid@ a Culturizate con Laboratoria!</h1>
+        <h2>¿Cuál es tu nombre?</h2>
+        <input id= "name" type="text" name="user" value="" placeholder= "Nombre">
+        <button id="jugar" type="button" onclick="jugar()">JUGAR</button>
+        <hr>
+    </div>
+   <!--/*Segunda página*/--> 
+    <div id="Hello">
+        <h1 class="txt" id="hi">Hola, ...</h1>
+        <h2 class= "txt">Elige el Lenguaje de Programación</h2>
+        <button type="button"  id= "javascript" onclick="quizJ()">JavaScript</button>
+        <button type="button" id= "python" onclick="quizP()">Python</button>
+        <hr>
+    </div>
+
+    <!--Pregunta 1 JavaSript--> 
+    <div id="javascript_P1">
+        <h1>¿Quién es el creador de JavaScript?</h1>
+        <img src="images/j1.png" alt="javascript1"  width="500px">
+        <div id="J_p1">
+            <br>
+            <label> <input type="radio" id="js1p1" name="Opcion" value="Jsp1">José Quijano</label>
+            <label> <input type="radio" id="js1p.0" name="Opcion" value="Jsp01">Brendan Eich</label>
+            <label> <input type="radio" id="js1p3" name="Opcion" value="Jsp1">Charles Chaplin</label>
+            <hr>
+            <div><button type="button" name="siguiente" id="p1Jsig" onclick="javascriptSig2()">Siguiente</button></div>
+        </div>
+    </div>
+    <!--Pregunta 2 JavaSript-->
+    <div id="javascript_P2">
+        <h1>¿Cuál es la instrucción usada para devolver un valor en una función de JavaScript?</h1>
+        <img src="images/j2.png" alt="javascript2"  width="500px">
+        <div id="J_p2">
+            <br>
+            <label> <input type="radio" id="js2p.0" name="Opcion" value="Jsp02">Return</label>
+            <label> <input type="radio" id="js2p1" name="Opcion" value="Jsp2">Send</label>
+            <label> <input type="radio" id="js2p3" name="Opcion" value="Jsp2">Value</label>
+            <hr>
+            <div><button type="button" name="siguiente" id="p1Jsig" onclick="javascriptSig3()">Siguiente</button></div>
+        </div>
+    </div> 
+    <!--Pregunta 3 JavaSript-->
+    <div id="javascript_P3">
+        <h1>Para concatenar cadenas de caracteres en Javascript se usa el carácter:</h1>
+        <img src="images/j3.png" alt="javascript3"  width="500px">
+        <div id="J_p3">
+            <br>
+            <label> <input type="radio" id="js3p1" name="Opcion" value="Jsp3">& (ampersand)</label>
+            <label> <input type="radio" id="js3p3" name="Opcion" value="Jsp3">* (por)</label>
+            <label> <input type="radio" id="js3p.0" name="Opcion" value="Jsp03"> + (más)</label>
+            <hr>
+            <div><button type="button" name="finalizar" id="jsfinalizar" onclick="resultJS()">Resultado</button></div>
+        </div>
+    </div> 
+    <!--Pregunta 1 Python--> 
+    <div id="python_P1">
+        <h1>¿Quién es el creador de Python?</h1>
+        <img src="images/p1.png" alt="python1"  width="500px">
+        <div id="P_p1">
+            <br>
+            <label> <input type="radio" id="py1p1" name="Opcion" value="Pyp1">James Gosling</label>
+            <label> <input type="radio" id="py1p.0" name="Opcion" value="Pyp01">Guido van Rossum</label>
+            <label> <input type="radio" id="py1p3" name="Opcion" value="Pyp1">Larry Page</label>
+            <hr>
+            <div><button type="button" name="siguiente" id="p1Pysig" onclick="pythonSig2()">Siguiente</button></div>
+        </div>
+    </div>
+    <!--Pregunta 2 Python-->
+    <div id="python_P2">
+        <h1>¿Cuál es el orden correcto para realizar estas acciones?</h1>
+        <img src="images/p2.png" alt="python2" width="500px">
+        <div id="P_p2">
+            <br>
+            <label> <input type="radio" id="py2p.0" name="Opcion" value="Pyp02">Abrir archivo - Leer archivo - Cerrar archivo</label>
+            <label> <input type="radio" id="py2p1" name="Opcion" value="Pyp2">Leer archivo - Abrir archivo - Cerrar archivo</label>
+            <label> <input type="radio" id="py2p3" name="Opcion" value="Pyp2">Cerrar archivo - Leer archivo - Abrir archivo</label>
+            <hr>
+            <div><button type="button" name="siguiente" id="p1Pysig" onclick="pythonSig3()">Siguiente</button></div>
+        </div>
+    </div> 
+    <!--Pregunta 3 Python-->
+    <div id="python_P3">
+        <h1>¿Qué es Python?</h1>
+        <img src="images/p3.png" alt="python3" width="500px">
+        <div id="P_p3">
+            <br>
+            <label> <input type="radio" id="py3p1" name="Opcion" value="Pyp3">Es un lenguaje de programación de bajo nivel</label>
+            <label> <input type="radio" id="py3p3" name="Opcion" value="Pyp3">Es una herramienta para usar la base de datos</label>
+            <label> <input type="radio" id="py3p.0" name="Opcion" value="Pyp03">Sirve para construir aplicaciones web y analizar datos</label>
+            <hr>
+            <div><button type="button" name="finalizar" id="pyfinalizar" onclick="resultPY()">Resultado</button></div>
+        </div>
+    </div> 
+    <!--Ventana de Resutados-->
+    <div id= "Ventana_resultado">
+        <h1 id= "Result">!Tú resultado es¡</h1>
+        <p id = "Correctas">Correctas....</p>
+        <p id = "Incorrectas">Incorrectas...</p>
+        <br>
+        <p>¡GRACIAS POR JUGAR!</p>
+        <br>
+        <h2>¿Quieres volver a intentarlo?</h2>
+        <button type="button" name= "button" onclick="Volver()">SI</button>
+        <button type="button" name= "button" onclick="Fin()">NO</button>
+        <hr>
+    </div>
+    <div id="graciasFin">
+        <hr>
+        <h1><strong>¡Gracias por jugar!</strong></h1>
+        <hr>
+    </div>
+</div>
+    <script type="text/javascript" src="app.js"></script>
+
+</body>
+</html>
